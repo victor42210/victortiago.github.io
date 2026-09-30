@@ -3,42 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Tiago | Site Officiel - DJ & Producteur Electronic Music</title>
-    <meta name="description" content="Site officiel de Victor Tiago, DJ et producteur de musique électronique (House, Deep, Tech House, Techno) originaire de Saint-Étienne. Fondateur de Fortwin Records et Kickbass Records.">
+    <title>Victor Tiago | Site Officiel - DJ & Producteur Techno</title>
+    <meta name="description" content="Site officiel de Victor Tiago, DJ et producteur de musique électronique (Techno, House, Deep House) originaire de Saint-Étienne. Fondateur de Fortwin Records et Kickbass Records.">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Script SEO pour Google (Données Structurées) -->
+    <!-- Google Rich Results / Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MusicGroup",
       "name": "Victor Tiago",
-      "description": "DJ et producteur français de musique électronique originaire de Saint-Étienne. Fondateur des labels Fortwin Records et Kickbass Records.",
-      "genre": ["House", "Deep House", "Tech House", "Techno"],
+      "genre": ["Techno", "House", "Deep House", "Tech House"],
       "homeLocation": {
         "@type": "Place",
         "name": "Saint-Étienne, France"
       },
       "foundingDate": "1994",
+      "knowsAbout": ["Music Production", "DJing", "Electronic Music"],
       "sameAs": [
         "https://soundcloud.com/tiagov",
         "https://open.spotify.com/intl-fr/artist/5mpzWNm7ysnHga1o8q6Zpc",
-        "https://www.discogs.com/artist/Victor+Tiago"
+        "https://bandcamp.com",
+        "https://beatport.com",
+        "https://www.facebook.com/VICTORTIAGO42/",
+        "https://www.instagram.com/victortiago42/",
+        "https://fr.ra.co/dj/tiago-2"
       ]
     }
     </script>
 
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+
     <style>
         :root {
             --bg-color: #0a0a0c;
-            --card-bg: #131316;
-            --accent-color: #00ffaa;
+            --card-bg: rgba(20, 20, 25, 0.7);
+            --accent-green: #00ff66;
+            --accent-purple: #8a2be2;
             --text-main: #ffffff;
-            --text-muted: #8e8e93;
+            --text-muted: #a0a0a5;
         }
 
         * {
@@ -48,200 +52,256 @@
         }
 
         body {
+            font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: 'Space Grotesk', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            line-height: 1.6;
             overflow-x: hidden;
-        }
-
-        /* Arrière plan lumineux style club modern */
-        .glow {
-            position: absolute;
-            top: -20%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0, 255, 170, 0.08) 0%, rgba(0,0,0,0) 70%);
-            z-index: 1;
-            pointer-events: none;
+            background: radial-gradient(circle at 80% 20%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 20% 80%, rgba(0, 255, 102, 0.1) 0%, transparent 50%),
+                        #0a0a0c;
+            background-attachment: fixed;
         }
 
         .container {
-            width: 100%;
-            max-width: 520px;
-            background-color: var(--card-bg);
-            border: 1px solid #222226;
-            border-radius: 24px;
-            padding: 40px 30px;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            position: relative;
-            z-index: 2;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
 
-        .profile-img-placeholder {
-            width: 120px;
-            height: 120px;
+        /* Header Animation */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .profile-img-container {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #1f1f24, #00ffaa33);
-            margin: 0 auto 20px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--accent-color);
-            font-size: 32px;
-            font-weight: bold;
-            color: var(--accent-color);
-            box-shadow: 0 0 20px rgba(0, 255, 170, 0.2);
+            object-fit: cover;
+            border: 3px solid var(--accent-green);
+            box-shadow: 0 0 25px rgba(0, 255, 102, 0.3);
         }
 
         h1 {
-            font-family: 'Syne', sans-serif;
+            font-size: 2.5rem;
             font-weight: 800;
-            font-size: 2.2rem;
             letter-spacing: -1px;
-            margin-bottom: 8px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #fff, var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
         }
 
         .subtitle {
-            font-size: 1rem;
-            color: var(--accent-color);
+            color: var(--accent-green);
+            font-weight: 600;
             text-transform: uppercase;
+            font-size: 0.85rem;
             letter-spacing: 2px;
-            font-weight: 700;
-            margin-bottom: 15px;
         }
 
         .location {
+            color: var(--text-muted);
             font-size: 0.9rem;
-            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 25px;
             margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
+            animation: fadeInY 1s ease-out;
         }
 
-        .bio {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: var(--text-muted);
-            margin-bottom: 35px;
-            text-align: left;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 20px;
-            border-radius: 12px;
-            border-left: 3px solid var(--accent-color);
-        }
-
-        .links-title {
-            font-size: 0.85rem;
+        h2 {
+            font-size: 1.1rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--text-muted);
+            letter-spacing: 1px;
             margin-bottom: 15px;
-            text-align: left;
-            font-weight: 700;
-        }
-
-        .links-list {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            margin-bottom: 35px;
-        }
-
-        .link-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 16px 20px;
-            background-color: #1a1a1f;
-            border: 1px solid #2d2d35;
-            border-radius: 14px;
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 500;
-            transition: all 0.2s ease-in-out;
-        }
-
-        .link-item:hover {
-            background-color: var(--accent-color);
-            color: #000000;
-            border-color: var(--accent-color);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 255, 170, 0.3);
-        }
-
-        .link-item span {
+            color: #fff;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .arrow {
-            font-size: 1.1rem;
+        h2 i {
+            color: var(--accent-green);
         }
+
+        p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Labels / Badges */
+        .label-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(138, 43, 226, 0.2);
+            border: 1px solid var(--accent-purple);
+            color: #e0b0ff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Links Buttons */
+        .links-title {
+            text-align: center;
+            margin: 35px 0 15px;
+            font-size: 1rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 16px 25px;
+            margin-bottom: 12px;
+            border-radius: 14px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-link:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-green);
+            box-shadow: 0 10px 20px rgba(0, 255, 102, 0.1);
+        }
+
+        .btn-link i:first-child {
+            font-size: 1.4rem;
+            margin-right: 15px;
+            width: 25px;
+            text-align: center;
+        }
+
+        .link-content {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .fa-chevron-right {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            transition: transform 0.3s;
+        }
+
+        .btn-link:hover .fa-chevron-right {
+            transform: translateX(5px);
+            color: var(--accent-green);
+        }
+
+        .soundcloud-btn:hover i:first-child { color: #ff5500; }
+        .spotify-btn:hover i:first-child { color: #1ed760; }
+        .bandcamp-btn:hover i:first-child { color: #619aa9; }
+        .beatport-btn:hover i:first-child { color: #01ff95; }
+        .facebook-btn:hover i:first-child { color: #1877f2; }
+        .instagram-btn:hover i:first-child { color: #e1306c; }
+        .ra-btn:hover i:first-child { color: #ffff00; }
+        .email-btn:hover i:first-child { color: var(--accent-purple); }
 
         footer {
+            text-align: center;
+            margin-top: 60px;
             font-size: 0.8rem;
-            color: #4e4e54;
-            border-top: 1px solid #222226;
-            padding-top: 20px;
+            color: var(--text-muted);
+            letter-spacing: 1px;
         }
 
-        footer a {
-            color: var(--text-muted);
-            text-decoration: none;
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInY {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem; }
+            .card { padding: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="glow"></div>
-
     <div class="container">
-        <!-- Photo d'artiste (initiales par défaut, peut être remplacée par une image) -->
-        <div class="profile-img-placeholder">VT</div>
-
-        <h1>Victor Tiago</h1>
-        <div class="subtitle">DJ & Producteur</div>
         
-        <div class="location">
-            📍 Saint-Étienne, FR
+        <!-- Header Profil -->
+        <header>
+            <div class="profile-img-container">
+                <img class="profile-img" src="https://facebook.com" alt="Victor Tiago DJ">
+            </div>
+            <h1>Victor Tiago</h1>
+            <div class="subtitle">DJ & Producteur Musique Électronique</div>
+            <div class="location"><i class="fa-solid fa-location-dot"></i> Saint-Étienne, France</div>
+        </header>
+
+        <!-- Bio Card -->
+        <div class="card">
+            <h2><i class="fa-solid fa-user"></i> Biographie</h2>
+            <p>Actif sur la scène underground depuis 1994. Explorateur de textures sonores, son univers navigue de manière fluide entre la House festive, la Deep immersive, la Tech House et une Techno résolument groovy, sombre ou mélodique. Un parcours forgé au fil des clubs (notamment résident au F2 à Saint-Étienne) et des free parties.</p>
         </div>
 
-        <div class="bio">
-            Actif sur la scène underground depuis 1994. Explorateur de textures sonores naviguant entre House, Deep House, Tech House et Techno. Fondateur des labels indépendants <strong>Fortwin Records</strong> et <strong>Kickbass Records</strong>.
+        <!-- Labels Card -->
+        <div class="card">
+            <h2><i class="fa-solid fa-record-vinyl"></i> Labels Fondés</h2>
+            <div class="label-container">
+                <span class="badge">Fortwin Records</span>
+                <span class="badge">Kickbass Records</span>
+            </div>
         </div>
 
-        <div class="links-title">Écouter & Suivre</div>
-        
-        <div class="links-list">
-            <a href="https://soundcloud.com/tiagov" target="_blank" rel="noopener" class="link-item">
-                <span>🎵 SoundCloud</span>
-                <span class="arrow">→</span>
-            </a>
-            <a href="https://open.spotify.com/intl-fr/artist/5mpzWNm7ysnHga1o8q6Zpc" target="_blank" rel="noopener" class="link-item">
-                <span>🔊 Spotify</span>
-                <span class="arrow">→</span>
-            </a>
-            <a href="https://www.discogs.com/artist/Victor+Tiago" target="_blank" rel="noopener" class="link-item">
-                <span>💿 Discogs (Discographie)</span>
-                <span class="arrow">→</span>
-            </a>
-        </div>
+        <div class="links-title">Musique & Discographie</div>
 
-        <footer>
-            © 2026 Victor Tiago. Tous droits réservés.
-        </footer>
-    </div>
+        <!-- SoundCloud -->
+        <a href="https://soundcloud.com/tiagov" target="_blank" class="btn-link soundcloud-btn">
+            <div class="link-content">
+                <i class="fa-brands fa-soundcloud"></i>
+                <span>SoundCloud</span>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
 
-</body>
-</html>
+        <!-- Spotify -->
+        <a href="https://open.spotify.com/intl-fr/artist/5mpzWNm7ysnHga1o8q6Zpc" target="_blank" class="btn-link spotify-btn">
+            <div class="link-content">
+                <i class="fa-brands fa-spotify"></i>
+                <span>Spotify</span>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+
+        <!-- Beatport -->
