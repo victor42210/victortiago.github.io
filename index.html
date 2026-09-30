@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Tiago | Site Officiel - DJ & Producteur Electronic Music</title>
+    <meta name="description" content="Site officiel de Victor Tiago, DJ et producteur de musique électronique (House, Deep, Tech House, Techno) originaire de Saint-Étienne. Fondateur de Fortwin Records et Kickbass Records.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Script SEO pour Google (Données Structurées) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Victor Tiago",
+      "description": "DJ et producteur français de musique électronique originaire de Saint-Étienne. Fondateur des labels Fortwin Records et Kickbass Records.",
+      "genre": ["House", "Deep House", "Tech House", "Techno"],
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Saint-Étienne, France"
+      },
+      "foundingDate": "1994",
+      "sameAs": [
+        "https://soundcloud.com/tiagov",
+        "https://open.spotify.com/intl-fr/artist/5mpzWNm7ysnHga1o8q6Zpc",
+        "https://www.discogs.com/artist/Victor+Tiago"
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0a0a0c;
+            --card-bg: #131316;
+            --accent-color: #00ffaa;
+            --text-main: #ffffff;
+            --text-muted: #8e8e93;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Space Grotesk', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Arrière plan lumineux style club modern */
+        .glow {
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 255, 170, 0.08) 0%, rgba(0,0,0,0) 70%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 520px;
+            background-color: var(--card-bg);
+            border: 1px solid #222226;
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-img-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1f1f24, #00ffaa33);
+            margin: 0 auto 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--accent-color);
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--accent-color);
+            box-shadow: 0 0 20px rgba(0, 255, 170, 0.2);
+        }
+
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 2.2rem;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .location {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .links-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 35px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background-color: #1a1a1f;
+            border: 1px solid #2d2d35;
+            border-radius: 14px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .link-item:hover {
+            background-color: var(--accent-color);
+            color: #000000;
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 170, 0.3);
+        }
+
+        .link-item span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .arrow {
+            font-size: 1.1rem;
+        }
+
+        footer {
+            font-size: 0.8rem;
+            color: #4e4e54;
+            border-top: 1px solid #222226;
+            padding-top: 20px;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glow"></div>
+
+    <div class="container">
+        <!-- Photo d'artiste (initiales par défaut, peut être remplacée par une image) -->
+        <div class="profile-img-placeholder">VT</div>
+
+        <h1>Victor Tiago</h1>
+        <div class="subtitle">DJ & Producteur</div>
+        
+        <div class="location">
+            📍 Saint-Étienne, FR
+        </div>
+
+        <div class="bio">
+            Actif sur la scène underground depuis 1994. Explorateur de textures sonores naviguant entre House, Deep House, Tech House et Techno. Fondateur des labels indépendants <strong>Fortwin Records</strong> et <strong>Kickbass Records</strong>.
+        </div>
+
+        <div class="links-title">Écouter & Suivre</div>
+        
+        <div class="links-list">
+            <a href="https://soundcloud.com/tiagov" target="_blank" rel="noopener" class="link-item">
+                <span>🎵 SoundCloud</span>
+                <span class="arrow">→</span>
+            </a>
+            <a href="https://open.spotify.com/intl-fr/artist/5mpzWNm7ysnHga1o8q6Zpc" target="_blank" rel="noopener" class="link-item">
+                <span>🔊 Spotify</span>
+                <span class="arrow">→</span>
+            </a>
+            <a href="https://www.discogs.com/artist/Victor+Tiago" target="_blank" rel="noopener" class="link-item">
+                <span>💿 Discogs (Discographie)</span>
+                <span class="arrow">→</span>
+            </a>
+        </div>
+
+        <footer>
+            © 2026 Victor Tiago. Tous droits réservés.
+        </footer>
+    </div>
+
+</body>
+</html>
